@@ -237,10 +237,11 @@ if(!class_exists('SUPER_PDF_Builder')) :
 
     		$output = $dompdf->output();
 
-        	$file_location = '/uploads/php/files/super-forms-pdf-preview.pdf';
-        	$source = urldecode( SUPER_PLUGIN_DIR . $file_location );
+            $filename = 'pdf-preview.pdf';
+        	$source = urldecode( dirname( __FILE__ ) . '/' . $filename );
     		$result = file_put_contents( $source, $output );
-    		var_dump($result);
+            echo '<iframe style="width:100%;height:600px;" src="' . plugin_dir_url( __FILE__ ) . $filename . '" />';
+
 			// Output the generated PDF to Browser
 			//$dompdf->stream();
 
