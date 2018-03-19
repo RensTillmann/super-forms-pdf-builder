@@ -237,13 +237,10 @@ if(!class_exists('SUPER_PDF_Builder')) :
 
     		$output = $dompdf->output();
 
-        	$file_location = '/pdf-preview.pdf';
-        	$source = urldecode( dirname( __FILE__ ) . $file_location );
+            $filename = 'pdf-preview.pdf';
+        	$source = urldecode( dirname( __FILE__ ) . '/' . $filename );
     		$result = file_put_contents( $source, $output );
-        	$url = urldecode( plugin_dir_url( __FILE__ ) . $file_location );
-    		echo '<iframe style="width:100%;height:600px;" src="' . $url . '" />';
-    		//var_dump($source);
-    		//var_dump($result);
+            echo '<iframe style="width:100%;height:600px;" src="' . plugin_dir_url( __FILE__ ) . $filename . '" />';
 			// Output the generated PDF to Browser
 			//$dompdf->stream();
 
