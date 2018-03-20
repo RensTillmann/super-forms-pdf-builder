@@ -188,6 +188,36 @@ if(!class_exists('SUPER_PDF_Builder')) :
 				.super-column {
 				    float:left;
 				}
+                .super_one_fifth {
+                    width:20%;
+                }
+                .super_one_fourth {
+                    width:25%;
+                }
+                .super_one_third {
+                    width:33.3333334%;
+                }
+                .super_two_fifth {
+                    width:40%;
+                }
+                .super_one_half {
+                    width:50%;
+                }
+                .super_three_fifth {
+                    width:60%;
+                }
+                .super_two_third {
+                    width:66.6666667%;
+                }
+                .super_three_fourth {
+                    width:75%;
+                }
+                .super_four_fifth {
+                    width:80%;
+                }
+                .super_one_full {
+                    width:100%;
+                }
 				.super-button[data-action="submit"] {
 				    display:none;
 				}
